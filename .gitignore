@@ -31,3 +31,6 @@ ENV/
 *.log
 *.bak
 *.swp
+
+# ignore data
+Sample_Data_PAH/*
