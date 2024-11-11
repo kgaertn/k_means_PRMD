@@ -2,7 +2,7 @@ import pandas as pd
 from lxml import etree
 
 class FileHandler:
-    def __init__(self, file_path):
+    def __init__(self, file_path,  sep: str = ',', excel_sheet_Name: str|None = None):
         """
         Initialize the FileHandler for a filepath.
 
@@ -11,6 +11,8 @@ class FileHandler:
         """
         self.file_path = file_path
         self.data = None
+        self.sep = sep
+        self.excel_sheet_name = excel_sheet_Name
 
     def parse_data(self, data_str):
         """convert comma-separated string to list of floats"""
